@@ -202,6 +202,10 @@
     return null;
   }
 
+  function esMovil() {
+    return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  }
+
   function urlGoogleCalendar(fecha, titulo, lugar, desc, horaIni, horaFin) {
     var inicio = aFechaHora(fecha, horaIni);
     var fin;
@@ -216,13 +220,15 @@
 
     var inicioStr = aFormatoFecha(inicio) + 'T' + aFormatoHora(inicio);
     var finStr = aFormatoFecha(fin) + 'T' + aFormatoHora(fin);
-    var url = 'https://www.google.com/calendar/render?action=TEMPLATE'
-      + '&text=' + encodeURIComponent(titulo)
+    var params = 'text=' + encodeURIComponent(titulo)
       + '&dates=' + inicioStr + '/' + finStr
       + '&details=' + encodeURIComponent(desc)
-      + '&location=' + encodeURIComponent(lugar)
-      + '&sf=true&output=xml';
-    return url;
+      + '&location=' + encodeURIComponent(lugar);
+
+    if (esMovil()) {
+      return 'https://calendar.google.com/calendar/u/0/r/eventedit?' + params;
+    }
+    return 'https://www.google.com/calendar/render?action=TEMPLATE&' + params + '&sf=true&output=xml';
   }
 
   function descargarICS(fecha, titulo, lugar, desc, horaIni, horaFin) {
