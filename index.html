@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>486° Aniversario de Arequipa — Programa Oficial 2026</title>
+  <meta name="description" content="Programa oficial de actividades por el 486° aniversario de Arequipa. Conoce todos los eventos, concursos y festejos organizados por la Municipalidad Provincial.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero" id="inicio">
+    <div class="hero-overlay"></div>
+    <div class="hero-contenido">
+      <p class="hero-pre">Municipalidad Provincial de Arequipa</p>
+      <h1>486° Aniversario de Arequipa</h1>
+      <p class="hero-lema">«Ciudad Blanca, orgullo del Perú»</p>
+      <div class="hero-cuenta" id="cuenta-regresiva">
+        <div class="cuenta-item"><span id="dias">00</span><small>días</small></div>
+        <div class="cuenta-item"><span id="horas">00</span><small>horas</small></div>
+        <div class="cuenta-item"><span id="minutos">00</span><small>min</small></div>
+        <div class="cuenta-item"><span id="segundos">00</span><small>seg</small></div>
+      </div>
+      <p class="hero-sub">Faltan para el <strong>Corso de la Amistad</strong> — 15 de agosto</p>
+      <a href="#calendario" class="btn-hero">Ver programa completo</a>
+    </div>
+  </header>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#inicio" class="nav-logo">Arequipa <span>es Fiesta</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#calendario">Calendario</a></li>
+        <li><a href="#informacion">Información</a></li>
+        <li><a href="#notas">Notas</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== CALENDARIO ===== -->
+  <section class="seccion" id="calendario">
+    <div class="contenedor">
+      <h2 class="seccion-titulo">Programa de Actividades</h2>
+      <p class="seccion-desc">486° Aniversario de Arequipa — Julio y Agosto 2026</p>
+
+      <!-- Filtros -->
+      <div class="filtros" id="filtros">
+        <button class="filtro-btn activo" data-filtro="todo">Todo</button>
+        <button class="filtro-btn" data-filtro="julio">Julio</button>
+        <button class="filtro-btn" data-filtro="agosto">Agosto</button>
+        <button class="filtro-btn" data-filtro="danza">Danza</button>
+        <button class="filtro-btn" data-filtro="musica">Música</button>
+        <button class="filtro-btn" data-filtro="gastronomia">Gastronomía</button>
+        <button class="filtro-btn" data-filtro="artesania">Artesanía</button>
+        <button class="filtro-btn" data-filtro="cultural">Cultural</button>
+        <button class="filtro-btn" data-filtro="adm">Inscripciones</button>
+      </div>
+
+      <!-- Leyenda -->
+      <div class="leyenda">
+        <span class="leyenda-item"><span class="badge badge-danza"></span> Danza</span>
+        <span class="leyenda-item"><span class="badge badge-musica"></span> Música</span>
+        <span class="leyenda-item"><span class="badge badge-gastronomia"></span> Gastronomía</span>
+        <span class="leyenda-item"><span class="badge badge-artesania"></span> Artesanía</span>
+        <span class="leyenda-item"><span class="badge badge-cultural"></span> Cultural</span>
+        <span class="leyenda-item"><span class="badge badge-adm"></span> Inscripciones/Sorteos</span>
+      </div>
+
+      <div class="calendario-tabla-wrapper">
+        <table class="calendario-tabla" id="tabla-actividades">
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Actividad</th>
+              <th>Lugar</th>
+              <th>Detalles</th>
+              <th>Guardar</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-cuerpo">
+            <!-- Julio -->
+            <tr class="actividad" data-mes="julio" data-tipo="adm">
+              <td data-label="Fecha">Vie 03 jul</td>
+              <td data-label="Actividad">📝 Cierre de inscripciones Festidanza Escolar 2026</td>
+              <td data-label="Lugar">Virtual / Presencial</td>
+              <td data-label="Detalles">Hasta las 15:00 h. <a href="#" class="enlace-base">Ver bases</a></td>
+            </tr>
+            <tr class="actividad" data-mes="julio" data-tipo="adm">
+              <td data-label="Fecha">Mié 08 jul</td>
+              <td data-label="Actividad">📋 Publicación de clasificados Festidanza</td>
+              <td data-label="Lugar">Plataformas digitales MPA</td>
+              <td data-label="Detalles">10 instituciones por categoría</td>
+            </tr>
+            <tr class="actividad" data-mes="julio" data-tipo="adm">
+              <td data-label="Fecha">Jue 09 jul</td>
+              <td data-label="Actividad">🎲 Sorteo orden de participación Festidanza</td>
+              <td data-label="Lugar">Municipalidad Provincial (16:00 h)</td>
+              <td data-label="Detalles">Obligatorio para delegados clasificados</td>
+            </tr>
+            <tr class="actividad" data-mes="julio" data-tipo="cultural">
+              <td data-label="Fecha">Mar 14 jul</td>
+              <td data-label="Actividad">🎭 Preselección Poesía Loncca — Categoría A</td>
+              <td data-label="Lugar">Teatro Arequepay (8:30–14:00 h)</td>
+              <td data-label="Detalles">Clasifican 10 finalistas</td>
+            </tr>
+            <tr class="actividad" data-mes="julio" data-tipo="cultural">
+              <td data-label="Fecha">Mar 14 jul</td>
+              <td data-label="Actividad">🎭 Preselección Poesía Loncca — Categoría B</td>
+              <td data-label="Lugar">Teatro Ateneo (8:30–14:00 h)</td>
+              <td data-label="Detalles">Clasifican 10 finalistas</td>
+            </tr>
+            <tr class="actividad" data-mes="julio" data-tipo="adm">
+              <td data-label="Fecha">Mar 14 jul</td>
+              <td data-label="Actividad">📋 Publicación programa oficial de festejos</td>
+              <td data-label="Lugar">Medios y redes sociales MPA</td>
+              <td data-label="Detalles">Programa completo</td>
+            </tr>
+            <tr class="actividad" data-mes="julio" data-tipo="danza">
+              <td data-label="Fecha">Jue 16 jul</td>
+              <td data-label="Actividad">🩰 Final Festidanza Escolar 2026 — Categoría A</td>
+              <td data-label="Lugar">Coliseo Arequipa (09:00 h)</td>
+              <td data-label="Detalles">Danzas folclóricas — Nivel Primaria</td>
+            </tr>
+            <tr class="actividad" data-mes="julio" data-tipo="danza">
+              <td data-label="Fecha">Jue 16 jul</td>
+              <td data-label="Actividad">🩰 Final Festidanza Escolar 2026 — Categoría B</td>
+              <td data-label="Lugar">Coliseo Arequipa (15:00 h)</td>
+              <td data-label="Detalles">Danzas folclóricas — Nivel Secundaria</td>
+            </tr>
+            <tr class="actividad" data-mes="julio" data-tipo="adm">
+              <td data-label="Fecha">Vie 17 jul</td>
+              <td data-label="Actividad">📝 Cierre de inscripciones Festival Gastronómico</td>
+              <td data-label="Lugar">Oficina Comisión de Festejos</td>
+              <td data-label="Detalles"><a href="#" class="enlace-base">Ver reglamento</a></td>
+            </tr>
+            <tr class="actividad" data-mes="julio" data-tipo="adm">
+              <td data-label="Fecha">Mar 21 jul</td>
+              <td data-label="Actividad">📝 Cierre inscripciones Concurso Música Arequipeña</td>
+              <td data-label="Lugar">Subgerencia Educación y Cultura (15:00 h)</td>
+              <td data-label="Detalles">Yaraví, Pampeña y Vals</td>
+            </tr>
+            <tr class="actividad" data-mes="julio" data-tipo="musica">
+              <td data-label="Fecha">Vie 24 jul</td>
+              <td data-label="Actividad">🎵 Concurso Selección de Tunas Anfitrionas</td>
+              <td data-label="Lugar">Teatro Municipal (18:00 h)</td>
+              <td data-label="Detalles"><a href="#" class="enlace-base">Ver bases</a></td>
+            </tr>
+            <tr class="actividad" data-mes="julio" data-tipo="musica">
+              <td data-label="Fecha">Jue 23 jul</td>
+              <td data-label="Actividad">🎶 Clasificación Música Arequipeña (puerta cerrada)</td>
+              <td data-label="Lugar">—</td>
+              <td data-label="Detalles">Evaluación de grabaciones</td>
+            </tr>
+            <tr class="actividad" data-mes="julio" data-tipo="adm">
+              <td data-label="Fecha">Vie 24 jul</td>
+              <td data-label="Actividad">📋 Resultados clasificados Música Arequipeña</td>
+              <td data-label="Lugar">Fanpage MPA y Somos Cultura MPA</td>
+              <td data-label="Detalles">6 finalistas por género</td>
+            </tr>
+            <tr class="actividad" data-mes="julio" data-tipo="gastronomia">
+              <td data-label="Fecha">Sáb 25 jul</td>
+              <td data-label="Actividad">🍲 XIV Festival Gastronómico (día 1)</td>
+              <td data-label="Lugar">Explanada Palacio Bellas Artes</td>
+              <td data-label="Detalles">10:00 – 20:00 h <a href="#" class="enlace-base">Ver bases</a></td>
+            </tr>
+            <tr class="actividad" data-mes="julio" data-tipo="gastronomia">
+              <td data-label="Fecha">Dom 26 jul</td>
+              <td data-label="Actividad">🍲 XIV Festival Gastronómico (día 2)</td>
+              <td data-label="Lugar">Explanada Palacio Bellas Artes</td>
+              <td data-label="Detalles">10:00 – 20:00 h</td>
+            </tr>
+            <tr class="actividad" data-mes="julio" data-tipo="gastronomia">
+              <td data-label="Fecha">Lun 27 jul</td>
+              <td data-label="Actividad">🍲 XIV Festival Gastronómico (día 3)</td>
+              <td data-label="Lugar">Explanada Palacio Bellas Artes</td>
+              <td data-label="Detalles">10:00 – 20:00 h</td>
+            </tr>
+            <tr class="actividad" data-mes="julio" data-tipo="gastronomia">
+              <td data-label="Fecha">Mar 28 jul</td>
+              <td data-label="Actividad">🍲 XIV Festival Gastronómico (día 4)</td>
+              <td data-label="Lugar">Explanada Palacio Bellas Artes</td>
+              <td data-label="Detalles">10:00 – 20:00 h</td>
+            </tr>
+            <tr class="actividad" data-mes="julio" data-tipo="adm">
+              <td data-label="Fecha">Jue 30 jul</td>
+              <td data-label="Actividad">📝 Cierre de inscripciones Concursos Artesanales</td>
+              <td data-label="Lugar">Virtual</td>
+              <td data-label="Detalles">Tallado en sillar, fierro, repujado</td>
+            </tr>
+            <!-- Agosto -->
+            <tr class="actividad" data-mes="agosto" data-tipo="adm">
+              <td data-label="Fecha">Sáb 01 ago</td>
+              <td data-label="Actividad">🎲 Sorteo orden de participación — Música Arequipeña</td>
+              <td data-label="Lugar">Oficina Subgerencia Educación y Cultura (15:00 h)</td>
+              <td data-label="Detalles">Obligatorio para clasificados</td>
+            </tr>
+            <tr class="actividad" data-mes="agosto" data-tipo="adm">
+              <td data-label="Fecha">Dom 02 ago</td>
+              <td data-label="Actividad">📝 Cierre de inscripciones Corso de la Amistad</td>
+              <td data-label="Lugar">Oficina Comisión de Festejos</td>
+              <td data-label="Detalles">Hasta el 02 de agosto</td>
+            </tr>
+            <tr class="actividad" data-mes="agosto" data-tipo="cultural">
+              <td data-label="Fecha">Lun 03 ago</td>
+              <td data-label="Actividad">🏆 Final Poesía Loncca 2026</td>
+              <td data-label="Lugar">Plaza de Armas (13:00 h)</td>
+              <td data-label="Detalles">10 finalistas por categoría</td>
+            </tr>
+            <tr class="actividad" data-mes="agosto" data-tipo="musica">
+              <td data-label="Fecha">Lun 03 ago</td>
+              <td data-label="Actividad">🎵 Final Concurso Música Arequipeña 2026</td>
+              <td data-label="Lugar">Plaza de Armas (15:00 h)</td>
+              <td data-label="Detalles">Yaraví, Pampeña y Vals</td>
+            </tr>
+            <tr class="actividad" data-mes="agosto" data-tipo="artesania">
+              <td data-label="Fecha">Mar 04 ago</td>
+              <td data-label="Actividad">🗿 Concursos Artesanales (día 1)</td>
+              <td data-label="Lugar">Frontis Portal San Agustín (07:00–17:00 h)</td>
+              <td data-label="Detalles">Tallado en sillar, fierro, repujado</td>
+            </tr>
+            <tr class="actividad" data-mes="agosto" data-tipo="artesania">
+              <td data-label="Fecha">Mié 05 ago</td>
+              <td data-label="Actividad">🗿 Concursos Artesanales (día 2)</td>
+              <td data-label="Lugar">Frontis Portal San Agustín (07:00–17:00 h)</td>
+              <td data-label="Detalles">Trabajo en vivo</td>
+            </tr>
+            <tr class="actividad" data-mes="agosto" data-tipo="artesania">
+              <td data-label="Fecha">Jue 06 ago</td>
+              <td data-label="Actividad">🗿 Concursos Artesanales (día 3)</td>
+              <td data-label="Lugar">Frontis Portal San Agustín (07:00–17:00 h)</td>
+              <td data-label="Detalles">Último día de elaboración</td>
+            </tr>
+            <tr class="actividad" data-mes="agosto" data-tipo="musica">
+              <td data-label="Fecha">Jue 06 ago</td>
+              <td data-label="Actividad">🎵 Pasacalle de Tunas</td>
+              <td data-label="Lugar">Calles de Arequipa</td>
+              <td data-label="Detalles">No ingresa a Plaza de Armas</td>
+            </tr>
+            <tr class="actividad" data-mes="agosto" data-tipo="artesania">
+              <td data-label="Fecha">Vie 07 ago</td>
+              <td data-label="Actividad">🏆 Evaluación y premiación Artesanales</td>
+              <td data-label="Lugar">Frontis Portal San Agustín</td>
+              <td data-label="Detalles">Evaluación: 12:00–13:00 h / Premiación: 15:00 h</td>
+            </tr>
+            <tr class="actividad" data-mes="agosto" data-tipo="cultural">
+              <td data-label="Fecha">Sáb 08 ago</td>
+              <td data-label="Actividad">🕯️ Pasacalle «Luces de la Candelaria»</td>
+              <td data-label="Lugar">Av. Independencia</td>
+              <td data-label="Detalles">Organizado por Asociación Provincial de Puno</td>
+            </tr>
+            <tr class="actividad" data-mes="agosto" data-tipo="danza">
+              <td data-label="Fecha">Dom 09 ago</td>
+              <td data-label="Actividad">🎊 III Corso Descentralizado (Preselección Sayas-Caporales)</td>
+              <td data-label="Lugar">Av. Bicentenario — Cerro Colorado (09:30 h)</td>
+              <td data-label="Detalles">Clasifican 3 agrupaciones para el Corso de la Amistad</td>
+            </tr>
+            <tr class="actividad" data-mes="agosto" data-tipo="cultural">
+              <td data-label="Fecha">Jue 14 ago</td>
+              <td data-label="Actividad">🏛️ Actos centrales y cierre de Plaza de Armas</td>
+              <td data-label="Lugar">Plaza de Armas</td>
+              <td data-label="Detalles">Entonación del Himno a Arequipa</td>
+            </tr>
+            <tr class="actividad" data-mes="agosto" data-tipo="danza" data-destacado="true">
+              <td data-label="Fecha">Vie 15 ago</td>
+              <td data-label="Actividad">🎉 <strong>CORSO DE LA AMISTAD 2026</strong></td>
+              <td data-label="Lugar">Av. Mariscal Castilla → Av. Independencia (09:00 h)</td>
+              <td data-label="Detalles">Evento central del aniversario</td>
+            </tr>
+            <tr class="actividad" data-mes="agosto" data-tipo="cultural">
+              <td data-label="Fecha">Sáb 29 ago</td>
+              <td data-label="Actividad">🎨 III Concurso Nacional de Pintura Rápida en Acuarela</td>
+              <td data-label="Lugar">Plaza España y alrededores (07:00–15:00 h)</td>
+              <td data-label="Detalles">Homenaje a Jorge Vinatea Reinoso</td>
+            </tr>
+            <tr class="actividad" data-mes="agosto" data-tipo="adm">
+              <td data-label="Fecha">Lun 31 ago</td>
+              <td data-label="Actividad">🏆 Premiación Concurso de Acuarela</td>
+              <td data-label="Lugar">Salón Consistorial (11:00 h)</td>
+              <td data-label="Detalles">Entrega de premios</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="calendario-nota">Programa oficial sujeto a modificaciones. Publicación oficial: <strong>14 de julio de 2026</strong>.</p>
+    </div>
+  </section>
+
+  <!-- ===== ACTIVIDADES POR CONFIRMAR ===== -->
+  <section class="seccion seccion-alt" id="por-confirmar">
+    <div class="contenedor">
+      <h2 class="seccion-titulo">Actividades con fecha por confirmar</h2>
+      <div class="tbd-grid">
+        <div class="tbd-card">
+          <span class="tbd-icon">🍽️</span>
+          <h3>II Festival del Adobo Arequipeño</h3>
+          <p>Fecha por confirmar. Inscripción virtual.</p>
+          <a href="#" class="enlace-base">Ver bases completas</a>
+        </div>
+        <div class="tbd-card">
+          <span class="tbd-icon">🏛️</span>
+          <h3>Función Estelar FESTIDANZA 2026</h3>
+          <p>17 de agosto — Participación de ganadores</p>
+        </div>
+        <div class="tbd-card">
+          <span class="tbd-icon">🏛️</span>
+          <h3>Función Matinal FESTIDANZA 2026</h3>
+          <p>17 y 18 de agosto — Participación de ganadores</p>
+        </div>
+        <div class="tbd-card">
+          <span class="tbd-icon">🩰</span>
+          <h3>Corso de la Amistad — Premiación</h3>
+          <p>Mejor Delegación, Danza y Carro</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INFORMACIÓN ÚTIL ===== -->
+  <section class="seccion" id="informacion">
+    <div class="contenedor">
+      <h2 class="seccion-titulo">Información útil</h2>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>📍 Oficinas de inscripción y consultas</h3>
+          <table class="info-tabla">
+            <tr><td><strong>Subgerencia de Educación y Cultura</strong></td></tr>
+            <tr><td>Portal Municipal N°110, 2do piso — Plaza de Armas</td></tr>
+            <tr><td>08:30 – 15:00 h</td></tr>
+            <tr><td style="padding-top:1rem"><strong>Comisión de Festejos</strong></td></tr>
+            <tr><td>Portal Municipal N°110, 3er piso — Plaza de Armas</td></tr>
+            <tr><td>08:30 – 15:00 h</td></tr>
+          </table>
+        </div>
+
+        <div class="info-card">
+          <h3>📱 Redes sociales oficiales</h3>
+          <ul class="redes-lista">
+            <li><a href="https://facebook.com/MunicipalidaddeArequipa" target="_blank" rel="noopener">Municipalidad de Arequipa</a></li>
+            <li><a href="https://facebook.com/ArequipaEstamosdeFiesta" target="_blank" rel="noopener">Arequipa Estamos de Fiesta</a></li>
+            <li><a href="https://facebook.com/SomosCulturaMPA" target="_blank" rel="noopener">Somos Cultura MPA</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NOTAS IMPORTANTES ===== -->
+  <section class="seccion seccion-alt" id="notas">
+    <div class="contenedor">
+      <h2 class="seccion-titulo">Notas importantes</h2>
+      <ul class="notas-lista">
+        <li>El programa oficial completo será publicado el <strong>14 de julio de 2026</strong>.</li>
+        <li>Las inscripciones son <strong>gratuitas</strong> para la mayoría de concursos culturales.</li>
+        <li>Los participantes de provincias son responsables de su traslado y hospedaje.</li>
+        <li>Para el Corso de la Amistad <strong>no se permitirá</strong> participación de políticos o candidatos.</li>
+        <li>El Corso de la Amistad contará con 4 agrupamientos y culminará aproximadamente a las 20:00 h.</li>
+        <li>La Plaza de Armas será cerrada el <strong>14 de agosto</strong> para proteger el patrimonio.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="contenedor">
+      <p class="footer-marca">Arequipa es Fiesta — 486° Aniversario</p>
+      <p class="footer-desc">Municipalidad Provincial de Arequipa</p>
+      <p class="footer-legal">Programa oficial sujeto a modificaciones. Los enlaces a bases y reglamentos serán habilitados próximamente.</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

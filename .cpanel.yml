@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/arequipaesfiesta/public_html
+    - /usr/bin/tar --exclude='./.git' --exclude='./.gitignore' --exclude='./.cpanel.yml' --exclude='./_movidos' --exclude='./docs-dev' -cf - . | /usr/bin/tar -xf - -C "$DEPLOYPATH"
+    - find "$DEPLOYPATH" -type f -exec chmod 644 {} \;
+    - find "$DEPLOYPATH" -type d -exec chmod 755 {} \;
