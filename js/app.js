@@ -336,4 +336,72 @@
     cerrarTodosLosPopups();
   });
 
+  // ===== JSON-LD EVENTOS =====
+  function generarJSONLDEventos() {
+    var eventos = [];
+
+    document.querySelectorAll('.actividad').forEach(function (fila) {
+      var celdas = fila.querySelectorAll('td');
+      var fechaTexto = celdas[0].textContent.trim();
+      var actividadTexto = celdas[1].textContent.trim();
+      var lugarTexto = celdas[2].textContent.trim();
+      var detallesTexto = celdas[3].textContent.trim();
+
+      if (!fechaTexto || !actividadTexto) return;
+
+      var fecha = parsearFecha(fechaTexto);
+      var titulo = limpiarTitulo(actividadTexto);
+      var horaIni = extraerHoraInicio(lugarTexto, detallesTexto);
+      var horaFin = extraerHoraFin(lugarTexto, detallesTexto);
+
+      var inicio = aFechaHora(fecha, horaIni);
+      var fin;
+      if (horaFin) {
+        fin = aFechaHora(fecha, horaFin);
+      } else if (horaIni) {
+        fin = new Date(inicio.getTime() + 3600000);
+      } else {
+        fin = new Date(fecha);
+        fin.setDate(fin.getDate() + 1);
+      }
+
+      var pad2 = function (n) { return String(n).padStart(2, '0'); };
+      var isoStr = function (d) {
+        return d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.getDate())
+          + 'T' + pad2(d.getHours()) + ':' + pad2(d.getMinutes()) + ':00-05:00';
+      };
+
+      eventos.push({
+        '@type': 'Event',
+        name: titulo,
+        startDate: isoStr(inicio),
+        endDate: isoStr(fin),
+        location: {
+          '@type': 'Place',
+          name: lugarTexto.replace(/\(.*?\)/g, '').trim(),
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Arequipa',
+            addressCountry: 'PE'
+          }
+        },
+        description: detallesTexto,
+        organizer: {
+          '@type': 'Organization',
+          name: 'Municipalidad Provincial de Arequipa'
+        }
+      });
+    });
+
+    var script = document.getElementById('jsonld-eventos');
+    if (script) {
+      script.textContent = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': eventos
+      }, null, 2);
+    }
+  }
+
+  generarJSONLDEventos();
+
 })();

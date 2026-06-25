@@ -1,5 +1,18 @@
 # CAMBIOS — arequipaesfiesta
 
+## [1.4.0] — 2026-06-25
+
+### Añadido
+- SEO: meta tags (author, keywords), Open Graph, Twitter Card, canonical URL.
+- JSON-LD Website + 25 Eventos (generados dinámicamente vía JS desde los datos del calendario).
+- `robots.txt`: permite crawlers, apunta a sitemap.
+- `sitemap.xml`: sitemap básico con URL canónica.
+- `llms.txt`: archivo markdown para crawlers de IA con calendario completo, información útil y notas.
+
+### Cambiado
+- `index.html`: head reestructurado con meta tags sociales y canonical.
+- `js/app.js`: nueva función `generarJSONLDEventos()` que crea structured data para cada actividad.
+
 ## [1.3.0] — 2026-06-25
 
 ### Cambiado
