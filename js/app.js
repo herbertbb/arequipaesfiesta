@@ -56,6 +56,7 @@
   // ===== FILTROS =====
   var filtros = document.querySelectorAll('.filtro-btn');
   var filas = document.querySelectorAll('.actividad');
+  var separadores = document.querySelectorAll('.separador-mes');
 
   function aplicarFiltro(filtro) {
     var activo = filtro || 'todo';
@@ -74,6 +75,19 @@
         fila.style.display = tipo === activo ? '' : 'none';
       }
     });
+
+    separadores.forEach(function (sep) {
+      if (activo === 'todo') {
+        sep.style.display = '';
+      } else if (activo === 'julio' || activo === 'agosto') {
+        var mes = sep.getAttribute('data-mes');
+        sep.style.display = mes === activo ? '' : 'none';
+      } else {
+        sep.style.display = 'none';
+      }
+    });
+
+    aplicarZebra();
   }
 
   filtros.forEach(function (btn) {
@@ -96,6 +110,43 @@
       }
     });
   });
+
+  // ===== ETIQUETA DE BADGE POR TIPO =====
+  var TIPOS_BADGE = {
+    danza: { icono: '🩰', texto: 'Danza' },
+    musica: { icono: '🎵', texto: 'Música' },
+    gastronomia: { icono: '🍲', texto: 'Gastro' },
+    artesania: { icono: '🗿', texto: 'Taller' },
+    cultural: { icono: '🎭', texto: 'Cultural' },
+    adm: { icono: '📋', texto: 'Adm' }
+  };
+
+  filas.forEach(function (fila) {
+    var tipo = fila.getAttribute('data-tipo');
+    var info = TIPOS_BADGE[tipo];
+    if (info) {
+      var badge = document.createElement('span');
+      badge.className = 'badge-tipo badge-tipo--' + tipo;
+      badge.textContent = info.icono + ' ' + info.texto;
+      var actTd = fila.querySelector('td[data-label="Actividad"]');
+      if (actTd) {
+        actTd.insertBefore(badge, actTd.firstChild);
+      }
+    }
+  });
+
+  // ===== ZEBRA STRIPING (ignora separadores) =====
+  function aplicarZebra() {
+    var visibles = document.querySelectorAll('.actividad');
+    var index = 0;
+    visibles.forEach(function (f) {
+      if (f.style.display !== 'none') {
+        f.classList.toggle('zebra', index % 2 === 1);
+        index++;
+      }
+    });
+  }
+  aplicarZebra();
 
   // ===== CALENDARIO: BOTONES GUARDAR =====
   var MESES = { 'ene': 0, 'feb': 1, 'mar': 2, 'abr': 3, 'may': 4, 'jun': 5, 'jul': 6, 'ago': 7, 'sep': 8, 'oct': 9, 'nov': 10, 'dic': 11 };

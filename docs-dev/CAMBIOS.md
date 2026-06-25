@@ -1,5 +1,18 @@
 # CAMBIOS — arequipaesfiesta
 
+## [1.3.0] — 2026-06-25
+
+### Cambiado
+- Tabla del calendario rediseñada:
+  - **Sticky header**: thead se pega al hacer scroll (top: 64px).
+  - **Separadores de mes**: filas vinotinto entre julio y agosto con indicador visual.
+  - **Badge de tipo**: cada actividad muestra un badge coloreado (🩰 Danza, 🎵 Música, 🍲 Gastro, 🗿 Taller, 🎭 Cultural, 📋 Adm).
+  - **Zebra striping**: filas alternadas sutiles, se recalcula al filtrar.
+  - **Hover mejorado**: fondo más notorio (6% → 7%).
+  - **Fecha destacada**: celda de fecha en negrita, más visible.
+  - **Mobile rediseñado**: fecha como título, actividad más grande, lugar/detalles en línea, separador de mes adaptado, badge visible.
+  - Filtros ahora ocultan/muestran correctamente los separadores de mes.
+
 ## [1.2.0] — 2026-06-25
 
 ### Cambiado
