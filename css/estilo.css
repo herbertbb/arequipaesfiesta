@@ -18,6 +18,22 @@
   --transicion: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --fuente-titulos: 'Playfair Display', Georgia, serif;
   --fuente-cuerpo: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* ===== TOKENS SEMÁNTICOS (sobre base territorial) ===== */
+  --color-bg: var(--blanco-sillar);
+  --color-surface: var(--blanco-puro);
+  --color-surface-alt: var(--marfil-mineral);
+  --color-surface-elevated: #FBF8F2;
+  --color-text: var(--grafito);
+  --color-text-muted: var(--grafito-suave);
+  --color-border: #D6CCBE;
+  --color-primary: var(--vinotinto);
+  --color-primary-hover: #571821;
+  --color-secondary: var(--azul-heraldico);
+  --color-accent: var(--oro-barroco);
+  --color-context: var(--verde-campina);
+  --color-success: #58703C;
+  --color-error: #8A2E3B;
 }
 
 /* ===== RESET ===== */
@@ -50,6 +66,25 @@ a:hover { color: var(--vinotinto); }
 }
 
 /* ===== HERO ===== */
+
+.hero-logo {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  margin: 0 auto 0.8rem;
+}
+
+.hero-anio {
+  font-family: var(--fuente-titulos);
+  font-size: clamp(0.85rem, 1.8vw, 1.1rem);
+  color: var(--color-accent);
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -57,7 +92,7 @@ a:hover { color: var(--vinotinto); }
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(135deg, #4A1018 0%, var(--vinotinto) 50%, #8A2A38 100%);
+  background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-surface-alt) 100%);
   overflow: hidden;
   padding: 120px 20px 80px;
 }
@@ -67,8 +102,8 @@ a:hover { color: var(--vinotinto); }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 20% 80%, rgba(200, 155, 60, 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);
+    radial-gradient(ellipse at 20% 80%, rgba(200, 155, 60, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(110, 31, 42, 0.03) 0%, transparent 50%);
   z-index: 1;
 }
 
@@ -80,8 +115,8 @@ a:hover { color: var(--vinotinto); }
 }
 
 .hero-bandera--fondo {
-  opacity: 0.06;
-  filter: blur(6px);
+  opacity: 0.025;
+  filter: blur(8px);
   background: linear-gradient(
     105deg,
     var(--oro-barroco) 0%,
@@ -102,7 +137,7 @@ a:hover { color: var(--vinotinto); }
 }
 
 .hero-bandera--frente {
-  opacity: 0.09;
+  opacity: 0.035;
   background: linear-gradient(
     115deg,
     var(--vinotinto) 0%,
@@ -128,7 +163,7 @@ a:hover { color: var(--vinotinto); }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.1) 0%, transparent 65%);
+  background: radial-gradient(ellipse at 30% 50%, rgba(200, 155, 60, 0.08) 0%, transparent 65%);
   animation: destello 7s ease-in-out infinite alternate;
   mix-blend-mode: soft-light;
 }
@@ -145,7 +180,7 @@ a:hover { color: var(--vinotinto); }
 
 @keyframes destello {
   0% { opacity: 0.1; transform: translateX(-20%); }
-  50% { opacity: 0.4; transform: translateX(5%); }
+  50% { opacity: 0.35; transform: translateX(5%); }
   100% { opacity: 0.1; transform: translateX(30%); }
 }
 
@@ -159,16 +194,17 @@ a:hover { color: var(--vinotinto); }
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: var(--oro-barroco);
+  color: var(--color-primary);
   margin-bottom: 0.5rem;
   font-weight: 600;
+  opacity: 0.7;
 }
 
 .hero h1 {
   font-family: var(--fuente-titulos);
   font-size: clamp(2.2rem, 6vw, 4rem);
   font-weight: 700;
-  color: var(--blanco-puro);
+  color: var(--color-primary);
   line-height: 1.15;
   margin-bottom: 0.5rem;
 }
@@ -177,7 +213,7 @@ a:hover { color: var(--vinotinto); }
   font-family: var(--fuente-titulos);
   font-size: clamp(1rem, 2.5vw, 1.3rem);
   font-style: italic;
-  color: rgba(255,255,255,0.7);
+  color: var(--color-text-muted);
   margin-bottom: 2rem;
 }
 
@@ -190,20 +226,20 @@ a:hover { color: var(--vinotinto); }
 }
 
 .cuenta-item {
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.15);
+  background: var(--color-surface-elevated);
+  border: 1px solid var(--color-border);
   border-radius: var(--radio);
   padding: 0.8rem 1.2rem;
   min-width: 80px;
   text-align: center;
+  box-shadow: var(--sombra);
 }
 
 .cuenta-item span {
   display: block;
   font-size: 2rem;
   font-weight: 700;
-  color: var(--blanco-puro);
+  color: var(--color-primary);
   font-variant-numeric: tabular-nums;
 }
 
@@ -211,31 +247,31 @@ a:hover { color: var(--vinotinto); }
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: rgba(255,255,255,0.6);
+  color: var(--color-text-muted);
 }
 
 .hero-sub {
-  color: rgba(255,255,255,0.75);
+  color: var(--color-text-muted);
   font-size: 0.95rem;
   margin-bottom: 2rem;
 }
 
 .btn-hero {
   display: inline-block;
-  background: var(--vinotinto);
-  color: var(--oro-barroco);
+  background: var(--color-primary);
+  color: var(--color-accent);
   padding: 0.9rem 2.5rem;
   border-radius: 50px;
   font-weight: 600;
   font-size: 0.95rem;
   transition: all var(--transicion);
-  border: 2px solid var(--oro-barroco);
+  border: 2px solid var(--color-accent);
   cursor: pointer;
 }
 
 .btn-hero:hover {
-  background: var(--oro-barroco);
-  color: var(--vinotinto);
+  background: var(--color-accent);
+  color: var(--color-primary);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(200, 155, 60, 0.4);
 }
@@ -261,6 +297,12 @@ a:hover { color: var(--vinotinto); }
   align-items: center;
   justify-content: space-between;
   height: 64px;
+}
+
+.nav-logo-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
 }
 
 .nav-logo {
@@ -347,7 +389,7 @@ a:hover { color: var(--vinotinto); }
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   text-align: center;
   margin-bottom: 0.5rem;
-  color: var(--azul-profundo);
+  color: var(--color-primary);
 }
 
 .seccion-desc {
@@ -414,12 +456,12 @@ a:hover { color: var(--vinotinto); }
   border-radius: 3px;
 }
 
-.badge-danza { background: #e74c3c; }
-.badge-musica { background: #8e44ad; }
-.badge-gastronomia { background: #e67e22; }
-.badge-artesania { background: #2ecc71; }
-.badge-cultural { background: #3498db; }
-.badge-adm { background: #95a5a6; }
+.badge-danza { background: var(--color-primary); }
+.badge-musica { background: var(--color-secondary); }
+.badge-gastronomia { background: var(--color-context); }
+.badge-artesania { background: var(--color-accent); }
+.badge-cultural { background: var(--color-secondary); }
+.badge-adm { background: var(--gris-volcanico); }
 
 /* ===== TABLA ===== */
 .calendario-tabla-wrapper {
@@ -439,8 +481,8 @@ a:hover { color: var(--vinotinto); }
   position: sticky;
   top: 64px;
   z-index: 10;
-  background: var(--azul-profundo);
-  color: var(--blanco-puro);
+  background: var(--color-primary);
+  color: var(--color-accent);
 }
 
 .calendario-tabla thead th {
@@ -532,12 +574,12 @@ a:hover { color: var(--vinotinto); }
   line-height: 1.5;
 }
 
-.badge-tipo--danza { background: rgba(231, 76, 60, 0.12); color: #c0392b; }
-.badge-tipo--musica { background: rgba(142, 68, 173, 0.12); color: #7d3c98; }
-.badge-tipo--gastronomia { background: rgba(230, 126, 34, 0.12); color: #ca6f1e; }
-.badge-tipo--artesania { background: rgba(46, 204, 113, 0.12); color: #27ae60; }
-.badge-tipo--cultural { background: rgba(52, 152, 219, 0.12); color: #2980b9; }
-.badge-tipo--adm { background: rgba(149, 165, 166, 0.15); color: #7f8c8d; }
+.badge-tipo--danza { background: rgba(110, 31, 42, 0.12); color: #6E1F2A; }
+.badge-tipo--musica { background: rgba(31, 78, 121, 0.12); color: #1F4E79; }
+.badge-tipo--gastronomia { background: rgba(111, 124, 75, 0.12); color: #6F7C4B; }
+.badge-tipo--artesania { background: rgba(200, 155, 60, 0.12); color: #C89B3C; }
+.badge-tipo--cultural { background: rgba(31, 78, 121, 0.12); color: #1F4E79; }
+.badge-tipo--adm { background: rgba(158, 148, 136, 0.15); color: #9E9488; }
 
 /* ===== FECHA DESTACADA ===== */
 .calendario-tabla tbody tr.actividad td[data-label="Fecha"] {
@@ -549,22 +591,22 @@ a:hover { color: var(--vinotinto); }
 
 /* ===== BORDES DE TIPO (indicador izquierdo) ===== */
 .calendario-tabla tbody tr[data-tipo="danza"] td:first-child {
-  border-left: 3px solid #e74c3c;
+  border-left: 3px solid var(--color-primary);
 }
 .calendario-tabla tbody tr[data-tipo="musica"] td:first-child {
-  border-left: 3px solid #8e44ad;
+  border-left: 3px solid var(--color-secondary);
 }
 .calendario-tabla tbody tr[data-tipo="gastronomia"] td:first-child {
-  border-left: 3px solid #e67e22;
+  border-left: 3px solid var(--color-context);
 }
 .calendario-tabla tbody tr[data-tipo="artesania"] td:first-child {
-  border-left: 3px solid #2ecc71;
+  border-left: 3px solid var(--color-accent);
 }
 .calendario-tabla tbody tr[data-tipo="cultural"] td:first-child {
-  border-left: 3px solid #3498db;
+  border-left: 3px solid var(--color-secondary);
 }
 .calendario-tabla tbody tr[data-tipo="adm"] td:first-child {
-  border-left: 3px solid #95a5a6;
+  border-left: 3px solid var(--gris-volcanico);
 }
 
 /* ===== BOTÓN CALENDARIO ===== */
@@ -703,7 +745,7 @@ a:hover { color: var(--vinotinto); }
 .tbd-card h3 {
   font-family: var(--fuente-titulos);
   font-size: 1.1rem;
-  color: var(--azul-profundo);
+  color: var(--color-primary);
   margin-bottom: 0.5rem;
 }
 
@@ -730,7 +772,7 @@ a:hover { color: var(--vinotinto); }
 .info-card h3 {
   font-family: var(--fuente-titulos);
   font-size: 1.2rem;
-  color: var(--azul-profundo);
+  color: var(--color-primary);
   margin-bottom: 1rem;
 }
 
@@ -799,7 +841,7 @@ a:hover { color: var(--vinotinto); }
 
 /* ===== FOOTER ===== */
 .footer {
-  background: var(--azul-profundo);
+  background: var(--color-text);
   color: rgba(255,255,255,0.7);
   text-align: center;
   padding: 3rem 0;

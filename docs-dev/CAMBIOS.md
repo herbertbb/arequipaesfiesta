@@ -1,5 +1,32 @@
 # CAMBIOS — arequipaesfiesta
 
+## [1.6.0] — 2026-06-25
+
+### Añadido
+- `img/logo.svg`: logo oficial con símbolo del Misti (dos versiones: light y dark).
+- **Hero**: logo AREQUIPA ES FIESTA (SVG inline) como título principal, reemplazando el H1 anterior. «486.° Aniversario» pasa a línea dorada independiente.
+- **Nav**: icono Misti (SVG inline) junto al wordmark "Arequipa es Fiesta".
+- **Favicon**: reemplazada la letra "A" por la silueta del Misti (triángulo carmesí + nieve + arco dorado).
+
+### Cambiado
+- `css/estilo.css`: agregados `.hero-logo` (max-width 280px), `.hero-anio` (dorado, mayúsculas espaciadas), `.nav-logo-icon` (alineación vertical inline).
+- `index.html`: hero reestructurado con logo como elemento principal.
+
+## [1.5.0] — 2026-06-25
+
+### Cambiado
+- **Rediseño cromático completo** según plan de territorialidad visual:
+  - Agregados 10 tokens semánticos (`--color-bg`, `--color-surface`, `--color-text`, `--color-primary`, `--color-secondary`, `--color-accent`, `--color-context`, etc.) sobre la base territorial existente.
+  - **Hero**: fondo oscuro → fondo sillar claro con bandera animada como watermark sutil (opacidad 0.025–0.035). Titular en vinotinto, lema y texto en grafito. Countdown con cards de fondo elevado.
+  - **Badges de tipo**: colores genéricos reemplazados por paleta territorial — danza vinotinto, música azul, gastronomía verde, artesanía oro, cultural azul, adm gris volcánico.
+  - **Leyenda** y **bordes izquierdos** de la tabla: mismos colores actualizados.
+  - **Footer**: azul profundo → grafito volcánico.
+  - **Títulos de sección**: azul profundo → vinotinto.
+  - **Cabecera de tabla**: azul profundo → vinotinto con texto dorado.
+
+### Eliminado
+- Colores genéricos externos a la paleta (`#e74c3c`, `#8e44ad`, `#e67e22`, `#2ecc71`, `#3498db`, `#95a5a6`).
+
 ## [1.4.0] — 2026-06-25
 
 ### Añadido

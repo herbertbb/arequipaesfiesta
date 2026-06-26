@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-light" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCFBF9" />
+      <stop offset="100%" stop-color="#F5F1E9" />
+    </linearGradient>
+    <linearGradient id="bg-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#222222" />
+      <stop offset="100%" stop-color="#151515" />
+    </linearGradient>
+
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F1C40F" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#AA7C11" />
+    </linearGradient>
+
+    <linearGradient id="crimson-left" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B0021" />
+      <stop offset="100%" stop-color="#6B0014" />
+    </linearGradient>
+    <linearGradient id="crimson-right" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5A0010" />
+      <stop offset="100%" stop-color="#3D0007" />
+    </linearGradient>
+  </defs>
+
+  <g id="light-version">
+    <rect x="0" y="0" width="400" height="500" fill="url(#bg-light)" />
+
+    <line x1="400" y1="0" x2="400" y2="500" stroke="#E6E1D8" stroke-width="2" />
+
+    <g transform="translate(200, 210)">
+
+      <path d="M-80,-60 Q-80,-50 -70,-50 Q-80,-50 -80,-40 Q-80,-50 -90,-50 Q-80,-50 -80,-60 Z" fill="url(#gold-grad)" opacity="0.8"/>
+      <circle cx="-55" cy="-35" r="3" fill="#D4AF37" />
+
+      <path d="M45,-110 Q45,-100 55,-100 Q45,-100 45,-90 Q45,-100 35,-100 Q45,-100 45,-110 Z" fill="url(#gold-grad)" />
+      <path d="M85,-65 Q85,-58 92,-58 Q85,-58 85,-51 Q85,-58 78,-58 Q85,-58 85,-65 Z" fill="url(#gold-grad)" opacity="0.9"/>
+
+      <circle cx="20" cy="-115" r="2.5" fill="#8B0021" />
+      <circle cx="70" cy="-90" r="3" fill="#6B0014" />
+      <circle cx="-25" cy="-105" r="2" fill="#D4AF37" />
+
+      <path d="M 15,-10 C 45,-10 85,-35 70,-75 C 65,-85 52,-90 40,-92" fill="none" stroke="url(#gold-grad)" stroke-width="3" stroke-linecap="round" />
+      <path d="M 25,-25 C 60,-25 95,-50 90,-85" fill="none" stroke="#8B0021" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="1 5" />
+      <path d="M -5,-5 C 35,5 110,-15 100,-60 C 95,-75 80,-85 65,-90" fill="none" stroke="url(#gold-grad)" stroke-width="2.5" stroke-linecap="round" />
+
+      <path d="M-45,-90 Q 5,-105 55,-75" fill="none" stroke="#D4AF37" stroke-width="1.5" />
+      <polygon points="-35,-93 -23,-95 -26,-83" fill="#8B0021" />
+      <polygon points="-17,-97 -5,-98 -11,-86" fill="#D4AF37" />
+      <polygon points="2,-98 14,-97 10,-85" fill="#8B0021" />
+      <polygon points="21,-95 33,-92 27,-80" fill="#D4AF37" />
+      <polygon points="40,-88 50,-83 43,-72" fill="#6B0014" />
+
+      <polygon points="-110,30 0,-70 0,30" fill="url(#crimson-left)" />
+      <polygon points="110,30 0,-70 0,30" fill="url(#crimson-right)" />
+
+      <polygon points="-33,-40 0,-70 0,-30 -12,-32 -18,-24 -25,-34" fill="#FFFFFF" />
+      <polygon points="33,-40 0,-70 0,-30 14,-34 22,-26 27,-36" fill="#F5F1E9" />
+
+      <path d="M-120,35 Q 0,15 120,35" fill="none" stroke="url(#gold-grad)" stroke-width="4" stroke-linecap="round" />
+    </g>
+
+    <text x="200" y="365" font-family="'Montserrat', 'Segoe UI', 'Arial', sans-serif" font-weight="800" font-size="34" fill="#6B0014" text-anchor="middle" letter-spacing="0.5">AREQUIPA</text>
+    <text x="200" y="405" font-family="'Montserrat', 'Segoe UI', 'Arial', sans-serif" font-weight="300" font-size="26" fill="#D4AF37" text-anchor="middle" letter-spacing="6">ES FIESTA</text>
+  </g>
+
+  <g id="dark-version" transform="translate(400, 0)">
+    <rect x="0" y="0" width="400" height="500" fill="url(#bg-dark)" />
+
+    <g transform="translate(200, 210)">
+
+      <path d="M-80,-60 Q-80,-50 -70,-50 Q-80,-50 -80,-40 Q-80,-50 -90,-50 Q-80,-50 -80,-60 Z" fill="url(#gold-grad)" opacity="0.9"/>
+      <circle cx="-55" cy="-35" r="3" fill="#F1C40F" />
+
+      <path d="M45,-110 Q45,-100 55,-100 Q45,-100 45,-90 Q45,-100 35,-100 Q45,-100 45,-110 Z" fill="url(#gold-grad)" />
+      <path d="M85,-65 Q85,-58 92,-58 Q85,-58 85,-51 Q85,-58 78,-58 Q85,-58 85,-65 Z" fill="url(#gold-grad)" />
+
+      <circle cx="20" cy="-115" r="2.5" fill="#A8002A" />
+      <circle cx="70" cy="-90" r="3" fill="#F5F1E9" />
+      <circle cx="-25" cy="-105" r="2" fill="#D4AF37" />
+
+      <path d="M 15,-10 C 45,-10 85,-35 70,-75 C 65,-85 52,-90 40,-92" fill="none" stroke="url(#gold-grad)" stroke-width="3" stroke-linecap="round" />
+      <path d="M 25,-25 C 60,-25 95,-50 90,-85" fill="none" stroke="#F5F1E9" stroke-width="2" stroke-linecap="round" stroke-dasharray="1 5" opacity="0.7" />
+      <path d="M -5,-5 C 35,5 110,-15 100,-60 C 95,-75 80,-85 65,-90" fill="none" stroke="url(#gold-grad)" stroke-width="2.5" stroke-linecap="round" />
+
+      <path d="M-45,-90 Q 5,-105 55,-75" fill="none" stroke="#D4AF37" stroke-width="1.5" opacity="0.8"/>
+      <polygon points="-35,-93 -23,-95 -26,-83" fill="#A8002A" />
+      <polygon points="-17,-97 -5,-98 -11,-86" fill="#D4AF37" />
+      <polygon points="2,-98 14,-97 10,-85" fill="#F5F1E9" />
+      <polygon points="21,-95 33,-92 27,-80" fill="#D4AF37" />
+      <polygon points="40,-88 50,-83 43,-72" fill="#A8002A" />
+
+      <polygon points="-110,30 0,-70 0,30" fill="url(#crimson-left)" />
+      <polygon points="110,30 0,-70 0,30" fill="url(#crimson-right)" />
+
+      <polygon points="-33,-40 0,-70 0,-30 -12,-32 -18,-24 -25,-34" fill="#FFFFFF" />
+      <polygon points="33,-40 0,-70 0,-30 14,-34 22,-26 27,-36" fill="#E6E1D8" />
+
+      <path d="M-120,35 Q 0,15 120,35" fill="none" stroke="url(#gold-grad)" stroke-width="4" stroke-linecap="round" />
+    </g>
+
+    <text x="200" y="365" font-family="'Montserrat', 'Segoe UI', 'Arial', sans-serif" font-weight="800" font-size="34" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">AREQUIPA</text>
+    <text x="200" y="405" font-family="'Montserrat', 'Segoe UI', 'Arial', sans-serif" font-weight="300" font-size="26" fill="#F1C40F" text-anchor="middle" letter-spacing="6">ES FIESTA</text>
+  </g>
+</svg>
