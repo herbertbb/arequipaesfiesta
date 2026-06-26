@@ -218,8 +218,8 @@
       fin.setDate(fin.getDate() + 1);
     }
 
-    var inicioStr = aFormatoFecha(inicio) + 'T' + aFormatoHora(inicio);
-    var finStr = aFormatoFecha(fin) + 'T' + aFormatoHora(fin);
+    var inicioStr = aFormatoFecha(inicio) + 'T' + aFormatoHora(inicio) + '-05:00';
+    var finStr = aFormatoFecha(fin) + 'T' + aFormatoHora(fin) + '-05:00';
     var params = 'text=' + encodeURIComponent(titulo)
       + '&dates=' + inicioStr + '/' + finStr
       + '&details=' + encodeURIComponent(desc)
@@ -243,8 +243,8 @@
       fin.setDate(fin.getDate() + 1);
     }
 
-    var inicioStr = aFormatoFecha(inicio) + 'T' + aFormatoHora(inicio);
-    var finStr = aFormatoFecha(fin) + 'T' + aFormatoHora(fin);
+    var inicioStr = aFormatoFecha(inicio) + 'T' + aFormatoHora(inicio) + '-05:00';
+    var finStr = aFormatoFecha(fin) + 'T' + aFormatoHora(fin) + '-05:00';
 
     var ics = [
       'BEGIN:VCALENDAR',

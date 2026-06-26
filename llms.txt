@@ -23,10 +23,10 @@ Ciudad: Arequipa
 | Jue 16 jul | Final Festidanza Escolar 2026 — Categoría A | Danza | Coliseo Arequipa | 09:00 h |
 | Jue 16 jul | Final Festidanza Escolar 2026 — Categoría B | Danza | Coliseo Arequipa | 15:00 h |
 | Vie 17 jul | Cierre de inscripciones Festival Gastronómico | Administrativo | Oficina Comisión de Festejos | — |
+| Mar 21 jul | Cierre inscripciones Concurso Música Arequipeña | Administrativo | Subgerencia Educación y Cultura | Hasta 15:00 h |
 | Jue 23 jul | Clasificación Música Arequipeña (puerta cerrada) | Música | — | — |
 | Vie 24 jul | Concurso Selección de Tunas Anfitrionas | Música | Teatro Municipal | 18:00 h |
 | Vie 24 jul | Resultados clasificados Música Arequipeña | Administrativo | Fanpage MPA y Somos Cultura MPA | — |
-| Mar 21 jul | Cierre inscripciones Concurso Música Arequipeña | Administrativo | Subgerencia Educación y Cultura | Hasta 15:00 h |
 | Sáb 25 jul | XIV Festival Gastronómico (día 1) | Gastronomía | Explanada Palacio Bellas Artes | 10:00–20:00 h |
 | Dom 26 jul | XIV Festival Gastronómico (día 2) | Gastronomía | Explanada Palacio Bellas Artes | 10:00–20:00 h |
 | Lun 27 jul | XIV Festival Gastronómico (día 3) | Gastronomía | Explanada Palacio Bellas Artes | 10:00–20:00 h |
@@ -48,8 +48,8 @@ Ciudad: Arequipa
 | Vie 07 ago | Evaluación y premiación Artesanales | Artesanía | Frontis Portal San Agustín | 12:00–15:00 h |
 | Sáb 08 ago | Pasacalle «Luces de la Candelaria» | Cultural | Av. Independencia | — |
 | Dom 09 ago | III Corso Descentralizado (Preselección Sayas-Caporales) | Danza | Av. Bicentenario — Cerro Colorado | 09:30 h |
-| Jue 14 ago | Actos centrales y cierre de Plaza de Armas | Cultural | Plaza de Armas | — |
-| Vie 15 ago | **CORSO DE LA AMISTAD 2026** | Danza | Av. Mariscal Castilla → Av. Independencia | 09:00–20:00 h |
+| Vie 14 ago | Actos centrales y cierre de Plaza de Armas | Cultural | Plaza de Armas | — |
+| Sáb 15 ago | **CORSO DE LA AMISTAD 2026** | Danza | Av. Mariscal Castilla → Av. Independencia | 09:00–20:00 h |
 | Sáb 29 ago | III Concurso Nacional de Pintura Rápida en Acuarela | Cultural | Plaza España y alrededores | 07:00–15:00 h |
 | Lun 31 ago | Premiación Concurso de Acuarela | Administrativo | Salón Consistorial | 11:00 h |
 
